@@ -140,7 +140,7 @@ class Endpoint(abc.ABC):
 
     @classproperty
     def regex(cls) -> Pattern[str]:  # pylint: disable=no-self-argument
-        return re.compile(re.escape(cls.path).replace('<', '(?P<').replace('>', '>.*?)') + '$', re.I)
+        return re.compile(re.escape(cls.path).replace('<', '(?P<').replace('>', '>.*?)') + '$')
 
     @classmethod
     def match(cls, path) -> Match[str]:

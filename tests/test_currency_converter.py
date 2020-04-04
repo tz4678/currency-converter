@@ -2,7 +2,7 @@ import os
 
 import requests
 
-from currency_converter import HeaderDict
+from currency_converter.base import HeaderDict
 
 API_HOST = os.getenv('API_HOST', 'http://localhost:9001')
 
