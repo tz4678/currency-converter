@@ -60,7 +60,7 @@ def main():
     server.register_endpoint(ConvertCurrency)
     try:
         ip, port = server.server_address
-        logger.info(f'Server address: {ip}:{port}')
+        logger.info('Server address: http://%s:%s', ip, port)
         server.serve_forever()
     except KeyboardInterrupt:
         pass
